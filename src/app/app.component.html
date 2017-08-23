@@ -63,13 +63,13 @@
   </span>
 
   <span *ngIf="(user | async)?.email">
-    <div class="row justify-content-center">
+    <div *ngIf="verificaFacebook()" class="row justify-content-center">
       <button (click)="vinculaFacebook()" class="btn btn-block btn-outline-primary">Conectar Facebook</button>
     </div>
-    <div class="row justify-content-center">
+    <div *ngIf="verificaGithub()" class="row justify-content-center">
       <button (click)="vinculaGithub()" class="btn btn-block btn-outline-warning">Conectar Github</button>
     </div>
-    <div class="row justify-content-center">
+    <div *ngIf="verificaEmail()" class="row justify-content-center">
       <button (click)="abreEmailLogin2 = !abreEmailLogin2" class="btn btn-block btn-outline-danger">Conectar Email</button>
     </div>
     <br>

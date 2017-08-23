@@ -39,6 +39,11 @@ vinculaFacebook(){
   });
 }
 
+verificaFacebook(){
+  //implementar verificação se o usuario esta associado ao facebook
+  return true;
+}
+
 loginGithub(){
   this.afAuth.auth.signInWithPopup(new firebase.auth.GithubAuthProvider());
 }
@@ -59,6 +64,11 @@ vinculaGithub(){
   });
 }
 
+verificaGithub(){
+  //implementar verificação se o usuario esta associado ao Github
+  return true;
+}
+
 loginEmail(){
   //console.log(this.email,this.senha);
   firebase.auth().signInWithEmailAndPassword(this.email, this.senha).catch((erro:any)=>{
@@ -74,6 +84,11 @@ vinculaEmail(){
     console.log(erro);
     console.log('ERRO');
   });
+}
+
+verificaEmail(){
+  //implementar verificação se o usuario esta associado por Email
+  return true;
 }
 
 cadastroEmail(){
