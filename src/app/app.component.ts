@@ -39,10 +39,16 @@ vinculaFacebook(){
   });
 }
 
-verificaFacebook(){
-  //implementar verificação se o usuario esta associado ao facebook
-  return true;
-}
+ verificaFacebook(){
+//   //implementar verificação se o usuario esta associado ao facebook
+//   this.afAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider()).then((res:any)=>{
+//     firebase.auth().currentUser.reauthenticateWithCredential(res.credential).then((user)=>{
+//       return true;
+//     });
+//   });
+// a solução acimda deve ser substituida por um handler. Da forma acima causa um loop travando a aplicação
+   return true;
+ }
 
 loginGithub(){
   this.afAuth.auth.signInWithPopup(new firebase.auth.GithubAuthProvider());
